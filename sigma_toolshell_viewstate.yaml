@@ -1,0 +1,24 @@
+title: Potential SharePoint ToolShell Malicious VIEWSTATE Exploitation
+id: 6c6a9f56-6e4d-4f5e-9b6f-f9d4a11e2025
+status: experimental
+description: Detects suspicious long __VIEWSTATE parameters potentially generated post ValidationKey leakage (CVE-2025-49706 + CVE-2025-49704 toolchain) enabling ysoserial gadget RCE.
+author: Ashish Kunwar (dorkerdevil)
+date: 2025/09/09
+references:
+  - https://arstechnica.com/security/2025/07/sharepoint-vulnerability-with-9-8-severity-rating-is-under-exploit-across-the-globe/
+logsource:
+  category: webserver
+  product: iis
+detection:
+  selection_long:
+    cs-uri-query|contains: '__VIEWSTATE='
+  condition: selection_long
+  timeframe: 15m
+fields:
+  - c-ip
+  - cs-method
+  - cs-uri-stem
+  - cs-uri-query
+falsepositives:
+  - Very large legitimate postbacks (rare)
+level: high

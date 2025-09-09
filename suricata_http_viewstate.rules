@@ -1,0 +1,2 @@
+# Author: Ashish Kunwar (dorkerdevil)
+alert http any any -> any any (msg:"SharePoint Suspicious Long VIEWSTATE"; http.uri; content:"__VIEWSTATE="; nocase; pcre:"/__VIEWSTATE=([A-Za-z0-9%+\/=]{1500,})/"; classtype:web-application-attack; sid:5020251501; rev:1;)

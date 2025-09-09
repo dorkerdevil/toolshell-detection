@@ -1,0 +1,7 @@
+# Author: Ashish Kunwar (dorkerdevil)
+TypeConfuseDelegate
+ObjectDataProvider
+ActivitySurrogate
+WindowsIdentity
+TextFormattingRunProperties
+BinaryFormatter
