@@ -1,4 +1,4 @@
-# SharePoint ToolShell Chain Detection Suite
+# SharePoint ToolShell Chain Detection 
 
 This repo helps defenders spot and triage attacks using the SharePoint ToolShell chain (CVE-2025-49706 + CVE-2025-49704). Attackers are actively exploiting this to run code on SharePoint servers by forging signed __VIEWSTATE payloads after stealing the ValidationKey.
 
@@ -117,3 +117,4 @@ Add suricata_http_viewstate.rules to your custom rules. Needs HTTP body inspecti
 **Author:** Ashish Kunwar (dorkerdevil)
 
 This repo is for defenders and blue teams. If you use it, credit is appreciated. Pull requests welcome.
+
